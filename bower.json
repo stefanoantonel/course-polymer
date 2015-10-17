@@ -1,0 +1,21 @@
+{
+  "name": "curso-polymer",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/stefanoantonel/curso-polymer",
+  "moduleType": [
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "webcomponentsjs": "~0.7.15"
+  }
+}

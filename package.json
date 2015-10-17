@@ -1,0 +1,6 @@
+{
+  "name": "curso-polymer",
+  "dependencies": {
+    "bower": "^1.6.3"
+  }
+}

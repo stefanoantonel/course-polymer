@@ -1,0 +1,17 @@
+Web Components: 
+	Son una nueva tecnologia que nos permite extender y personalizar HTML.
+Para poder utilizar estos web components necesito: (son las cosas que los navegadores tienen que soportar)
+	- Custom elements
+		es la capacidad para crear nuestras propios tags de HTML que el navegador va a interpretar como cualquier otra etiqueta.
+	- Shadow DOM
+		provee encapsulamiento de javascript, css y templates. es como si cada elemento que creamos tiene su propio DOM y nosotros podemos personalizarlo por separado y dejar mas limpio el "main DOM"
+	- HTML templates 
+		es un mecanismo que permite mantener contenido del lado del cliente que no se hace render cuando carga la aplicacion prinicpal, sino que usa JS para buscar su contenido en el runtime, osea cuando es necesario, si no lo usamos, nunca lo cargo por completo.
+	- HTML imports
+		es el mecanismo para poder importar package o nuestro propios componentes. lo hacemos de forma nativa, sin ningun preprocesador.
+
+	Manos a la obra: 
+		Instalamos bower
+
+		Usamos webcomponentsjs que es quien se encarga de la compatibilidad entre navegadores para web components.
+
