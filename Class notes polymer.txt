@@ -15,3 +15,6 @@ Para poder utilizar estos web components necesito: (son las cosas que los navega
 
 		Usamos webcomponentsjs que es quien se encarga de la compatibilidad entre navegadores para web components.
 
+		Tenemos que importar con un link en el body y para eso usamos <link rel="import" href="hola-platzi.html">
+		Tambien incluimos <script src="bower_components/Webcomponentsjs/webcomponents.js"></script>
+		
