@@ -1,0 +1,42 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<dom-module id="hola-polymer">
+	<template>
+		<p>
+			Hola, 
+			<strong>{{who}}</strong>
+		</p>
+	</template>
+
+	<script>
+	Polymer({
+		is: "hola-polymer",
+		properties: {
+			who: {
+				type: String,
+				value: "Platzi"
+			}
+		}
+	});
+	</script>
+</dom-module>
+
+
+<dom-module id="x-foo">
+
+  <template>I am x-foo! <b>{{w}}</b></template>
+
+  <script>
+    Polymer({
+		is: 'x-foo',
+		properties: {
+			w: {
+				type: String,
+				value: "Platzi"
+			}
+		}
+    });
+  </script>
+
+</dom-module>
+

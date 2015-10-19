@@ -17,4 +17,33 @@ Para poder utilizar estos web components necesito: (son las cosas que los navega
 
 		Tenemos que importar con un link en el body y para eso usamos <link rel="import" href="hola-platzi.html">
 		Tambien incluimos <script src="bower_components/Webcomponentsjs/webcomponents.js"></script>
+
+	Vamos a hacer los webcomponents con polymer
+		Instalamos polymer via bower 
+		Para hacer un componente lo hacemos con 
+			<dom-module id="hola-polymer">
+				<template>
+					<p>
+						Hola, 
+						<strong>{{who}}</strong>
+					</p>
+				</template>
+
+				<script>
+				Polymer({
+					is: "hola-polymer",
+					properties: {
+						who: {
+							type: String,
+							value: "Platzi"
+						}
+					}
+				});
+				</script>
+			</dom-module>
 		
+		--------!OJO! -----------------------------
+			Tener cuidado con el {{}} y de ponerlo siempre dentro de un elemento HTML y sin especios 
+				<b>{{who}}</b> => CORRECTO
+				<b> {{who}} </b> => MAL
+
