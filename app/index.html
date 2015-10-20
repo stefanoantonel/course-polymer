@@ -88,6 +88,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <iron-icon icon="mail"></iron-icon>
             <span>Contact</span>
           </a>
+
+          <a data-route="map" href="/map" on-click="onDataRouteClick">
+            <iron-icon icon="star"></iron-icon>
+            <span>Map</span>
+          </a>
         </paper-menu>
       </paper-scroll-header-panel>
 
@@ -123,7 +128,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-material elevation="1">
                 <my-greeting></my-greeting>
 
-                <p class="paper-font-subhead">The power of Sync!:</p>
+                <p class="paper-font-subhead">You now have:</p>
                 <my-list></my-list>
 
                 <p class="paper-font-body2">Looking for more Web App layouts? Check out our <a href="https://github.com/PolymerElements/app-layout-templates">layouts</a> collection. You can also <a href="http://polymerelements.github.io/app-layout-templates/">preview</a> them live.</p>
@@ -174,6 +179,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-material elevation="1">
                 <h2 class="page-title">Contact</h2>
                 <p>This is the contact section</p>
+              </paper-material>
+            </section>
+
+            <section data-route="map">
+              <paper-material elevation="1">
+                <h2 class="page-title">Map</h2>
+                <style>
+                  google-map {
+                    height: 600px;
+                  }
+                </style>
+                <google-map latitude="37.77493" longitude="-122.41942"></google-map>
               </paper-material>
             </section>
 

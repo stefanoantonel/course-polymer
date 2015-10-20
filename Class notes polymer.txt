@@ -53,11 +53,23 @@ Para poder utilizar estos web components necesito: (son las cosas que los navega
 		Tenemos que crear una carpeta por cada uno de los webcomponents.
 		Esto nos ofrece muchas tareas que las hace solas como vulcanize que une todos loa archivos en uno tipo el browserify.
 		Browser sync nos permite que cuando estamos trabajando y guardamos el archivo me lo publica automaticamente. Y tiene muchas opciones mas!
+		Para poder correr el server: 
+			gulp serve
 
 		Material Palette es para darle estilos tipo material design pero esta muy bueno porque nos da consejos para poder hacer apps mejores con estilo. 
 
 		Con el catalogo de los web components en https://elements.polymer-project.org/ 
 		Tenemos resueltos muchos elementos que podemos consumir y estan listos por ejemplo compras online, o offline, etc. 
-		podemos usar yo polymer:element platzi-element nos da la estructura para un nuevo webcomponent asi no tenemos errores. 
+		Si usamos "yo polymer:element <nombre con - >" es para crear un nuevo componente pero yeoman nos lo crea dentro de la estrucura y reduce los errores.
+		Vamos a crear un elemento que se llame platzi. 
+			yo polymer:el platzi-element
+
+		Vamos a hacer nuestro elemento que consuma un mapa de google.
+		Para eso vamos a irnos dentro de app a index.html y de ahi tenemos el drawer content que es la lista del costado y la secction que es lo que aparece cuando tocamos al costado. Agarramos los ejemplos y los copiamos por ejemplo el del contacto en el drawer y tambien hacemos lo mismo en las sections.
+		Ahora vamos a configurar las rutas en "elements/routing.html" y hacemos lo mismo de copiar y pegar. Es muy similar a express.io
+		Ahora copiamos y pegamos lo que nos dice: "https://elements.polymer-project.org/elements/google-map"
+		que es desde donde sacamos los mapas y tenemos que instalar las dependencias de los mismos con "bower install --save GoogleWebComponents/google-map"
+		Sigue sin mostrar nada porque si vemos en el archivo "elements/elelemts.html" no lo tenemos incluido al elemento del mapa 
+			<link rel="import" href="../bower_components/google-map/google-map.html">
 		
 
