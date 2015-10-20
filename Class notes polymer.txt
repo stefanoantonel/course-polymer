@@ -56,4 +56,8 @@ Para poder utilizar estos web components necesito: (son las cosas que los navega
 
 		Material Palette es para darle estilos tipo material design pero esta muy bueno porque nos da consejos para poder hacer apps mejores con estilo. 
 
+		Con el catalogo de los web components en https://elements.polymer-project.org/ 
+		Tenemos resueltos muchos elementos que podemos consumir y estan listos por ejemplo compras online, o offline, etc. 
+		podemos usar yo polymer:element platzi-element nos da la estructura para un nuevo webcomponent asi no tenemos errores. 
 		
+
