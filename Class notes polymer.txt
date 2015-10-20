@@ -47,3 +47,13 @@ Para poder utilizar estos web components necesito: (son las cosas que los navega
 				<b>{{who}}</b> => CORRECTO
 				<b> {{who}} </b> => MAL
 
+		Bajamos algo que se llama http://yeoman.io/ es para poder general las estructuras necesarias y que nos quede un codigo bien hecho. Este Yeoman tiene para crear muchas estrucuras segun el proyecto que sea. 
+		Para que sea especifico de polymer tenemos que instalar https://github.com/yeoman/generator-polymer
+		La idea de esto es poder tener algo donde trabajar y poder tener todo a mano descargado ya que trae los estilos y algunos js asociados con polymer. 
+		Tenemos que crear una carpeta por cada uno de los webcomponents.
+		Esto nos ofrece muchas tareas que las hace solas como vulcanize que une todos loa archivos en uno tipo el browserify.
+		Browser sync nos permite que cuando estamos trabajando y guardamos el archivo me lo publica automaticamente. Y tiene muchas opciones mas!
+
+		Material Palette es para darle estilos tipo material design pero esta muy bueno porque nos da consejos para poder hacer apps mejores con estilo. 
+
+		
