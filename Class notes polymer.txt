@@ -80,4 +80,23 @@ Layout de Polymer: (todo esto va en las class)
 	- vertical layout center => si lo pones en el padre te centra los hijos pero cada uno en nuevas filas.
 
 Vamos a crear una tienda online!
-	
+	Si nos vamos a "styles/app-theme.html" ahi tenemos para cambiar el estilo de la app en general. Siempre usar <style is="custom-style"> porque sino no funcionan los cambios. 
+		- :root nos cambia el header y otras cosas mas genreales.
+		- --drawer-menu-color: #7DCD40; nos cambia el background de donde dice menu. 
+		- Para cambiar el drawer panel de la izquierda por completo usamos 
+			paper-drawer-panel {
+				--paper-drawer-panel-left-drawer-conteiner: {
+					background-color: #93d561;
+				}
+			}
+
+	Vamos a consumir una api de mercadolibre y para eso vamos a usar ajax que lo encontramos en iron ajax en el catalogo de polymer 
+		=> Creamos un componente con el "yo polymer:el products-all"
+		=> Buscamos alguna API para pegarle. Por ejemplo https://api.mercadolibre.com/sites/MLA/search?category=MLA1648
+		=> Copiamos del catalo de polymer el ejemplo de ajax
+		=> Instalamos el bower dependences de ajax
+		=> Incluimos el iron ajax al elements.html
+		=> Incluimos nuestro webcomponent dentro de los sections asi lo podemos ver 
+		=> Cambiamos las rutas en el archivo routes.html
+
+
