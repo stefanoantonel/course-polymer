@@ -21,7 +21,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       debounce-duration="300">
     </iron-ajax>
 
-    <p>{{data}}</p>
+    <div class="vertical justified layout">
+      <template is="dom-repeat" items="{{data.results}}">
+        <single-product item="{{item}}"></single-product>
+      </template>
+    </div>
 
   </template>
   <script>
@@ -31,16 +35,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     Polymer({
       is: 'products-all',
 
-      properties: {
-        foo: {
-          type: String,
-          value: 'products-all',
-          notify: true
-        }
-      },
-
       handleResponse: function(data) {
-        this.data = data
+        this.data = data.detail.response
       }
     });
   })();

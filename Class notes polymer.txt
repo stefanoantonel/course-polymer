@@ -94,9 +94,11 @@ Vamos a crear una tienda online!
 		=> Creamos un componente con el "yo polymer:el products-all"
 		=> Buscamos alguna API para pegarle. Por ejemplo https://api.mercadolibre.com/sites/MLA/search?category=MLA1648
 		=> Copiamos del catalo de polymer el ejemplo de ajax
+		http://stackoverflow.com/questions/30591409/using-polymer-ajax-response
 		=> Instalamos el bower dependences de ajax
 		=> Incluimos el iron ajax al elements.html
 		=> Incluimos nuestro webcomponent dentro de los sections asi lo podemos ver 
 		=> Cambiamos las rutas en el archivo routes.html
 
-
+	Vamos a hacer que lo que traje de mercadolibre me lo ponga en cards y eso.
+		=> Creamos un div que adentro tiene un template y al template como es un elemento podemos ponerle el atributo "is=dom-repeat" el cual nos va a iterar 
