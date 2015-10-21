@@ -102,3 +102,14 @@ Vamos a crear una tienda online!
 
 	Vamos a hacer que lo que traje de mercadolibre me lo ponga en cards y eso.
 		=> Creamos un div que adentro tiene un template y al template como es un elemento podemos ponerle el atributo "is=dom-repeat" el cual nos va a iterar 
+
+	Para saber mas de los FLEX en css
+		https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+	Vamos a hacer offline with service workers
+		=> Polymer traia por defecto que cache estuviera activado pero ahora como hubo problemas tenemos que habilitarlos nosotros. En el elements.html tenemos unas lineas comentadas que nos dan esa capacidad y dice (2/2) por lo que tenemos que buscar donde esta el (1/2) que esta en el index.html.
+		=> La documentacion facil: https://elements.polymer-project.org/elements/platinum-sw 
+		=> Tenemos que ir al archivo gulpfile.js y ahi buscamos una nota que dice que agreguemos cache despues de vulcanize si queremos usar service workers.
+
+		
+
