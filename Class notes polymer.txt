@@ -79,4 +79,5 @@ Layout de Polymer: (todo esto va en las class)
 	- flex => que intente ocupar mas espacio hasta que encuentre otro elemento. va en cada hijo explicitado.
 	- vertical layout center => si lo pones en el padre te centra los hijos pero cada uno en nuevas filas.
 
+Vamos a crear una tienda online!
 	
