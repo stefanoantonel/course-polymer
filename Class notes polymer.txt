@@ -1,16 +1,16 @@
-Web Components: 
+Web Components:
 	Son una nueva tecnologia que nos permite extender y personalizar HTML.
 Para poder utilizar estos web components necesito: (son las cosas que los navegadores tienen que soportar)
 	- Custom elements
 		es la capacidad para crear nuestras propios tags de HTML que el navegador va a interpretar como cualquier otra etiqueta.
 	- Shadow DOM
 		provee encapsulamiento de javascript, css y templates. es como si cada elemento que creamos tiene su propio DOM y nosotros podemos personalizarlo por separado y dejar mas limpio el "main DOM"
-	- HTML templates 
+	- HTML templates
 		es un mecanismo que permite mantener contenido del lado del cliente que no se hace render cuando carga la aplicacion prinicpal, sino que usa JS para buscar su contenido en el runtime, osea cuando es necesario, si no lo usamos, nunca lo cargo por completo.
 	- HTML imports
 		es el mecanismo para poder importar package o nuestro propios componentes. lo hacemos de forma nativa, sin ningun preprocesador.
 
-	Manos a la obra: 
+	Manos a la obra:
 		Instalamos bower
 
 		Usamos webcomponentsjs que es quien se encarga de la compatibilidad entre navegadores para web components.
@@ -19,12 +19,12 @@ Para poder utilizar estos web components necesito: (son las cosas que los navega
 		Tambien incluimos <script src="bower_components/Webcomponentsjs/webcomponents.js"></script>
 
 	Vamos a hacer los webcomponents con polymer
-		Instalamos polymer via bower 
-		Para hacer un componente lo hacemos con 
+		Instalamos polymer via bower
+		Para hacer un componente lo hacemos con
 			<dom-module id="hola-polymer">
 				<template>
 					<p>
-						Hola, 
+						Hola,
 						<strong>{{who}}</strong>
 					</p>
 				</template>
@@ -41,75 +41,79 @@ Para poder utilizar estos web components necesito: (son las cosas que los navega
 				});
 				</script>
 			</dom-module>
-		
+
 		--------!OJO! -----------------------------
-			Tener cuidado con el {{}} y de ponerlo siempre dentro de un elemento HTML y sin especios 
+			Tener cuidado con el {{}} y de ponerlo siempre dentro de un elemento HTML y sin especios
 				<b>{{who}}</b> => CORRECTO
 				<b> {{who}} </b> => MAL
 
-		Bajamos algo que se llama http://yeoman.io/ es para poder general las estructuras necesarias y que nos quede un codigo bien hecho. Este Yeoman tiene para crear muchas estrucuras segun el proyecto que sea. 
+		Bajamos algo que se llama http://yeoman.io/ es para poder general las estructuras necesarias y que nos quede un codigo bien hecho. Este Yeoman tiene para crear muchas estrucuras segun el proyecto que sea.
 		Para que sea especifico de polymer tenemos que instalar https://github.com/yeoman/generator-polymer
-		La idea de esto es poder tener algo donde trabajar y poder tener todo a mano descargado ya que trae los estilos y algunos js asociados con polymer. 
+		La idea de esto es poder tener algo donde trabajar y poder tener todo a mano descargado ya que trae los estilos y algunos js asociados con polymer.
 		Tenemos que crear una carpeta por cada uno de los webcomponents.
 		Esto nos ofrece muchas tareas que las hace solas como vulcanize que une todos loa archivos en uno tipo el browserify.
 		Browser sync nos permite que cuando estamos trabajando y guardamos el archivo me lo publica automaticamente. Y tiene muchas opciones mas!
-		Para poder correr el server: 
+		Para poder correr el server:
 			gulp serve
 
-		Material Palette es para darle estilos tipo material design pero esta muy bueno porque nos da consejos para poder hacer apps mejores con estilo. 
+		Material Palette es para darle estilos tipo material design pero esta muy bueno porque nos da consejos para poder hacer apps mejores con estilo.
 
-		Con el catalogo de los web components en https://elements.polymer-project.org/ 
-		Tenemos resueltos muchos elementos que podemos consumir y estan listos por ejemplo compras online, o offline, etc. 
+		Con el catalogo de los web components en https://elements.polymer-project.org/
+		Tenemos resueltos muchos elementos que podemos consumir y estan listos por ejemplo compras online, o offline, etc.
 		Si usamos "yo polymer:element <nombre con - >" es para crear un nuevo componente pero yeoman nos lo crea dentro de la estrucura y reduce los errores.
-		Vamos a crear un elemento que se llame platzi. 
+		Vamos a crear un elemento que se llame platzi.
 			yo polymer:el platzi-element
 
 		Vamos a hacer nuestro elemento que consuma un mapa de google.
-			- Al haber hecho el "yo polymer:el <nombre-asi>" ya tenemos nuestro elemento pero ahora tenemos que configurarlo correctamente. 
+			- Al haber hecho el "yo polymer:el <nombre-asi>" ya tenemos nuestro elemento pero ahora tenemos que configurarlo correctamente.
 			- Para eso vamos a irnos dentro de app a index.html y de ahi tenemos el drawer content que es la lista del costado y la secction que es lo que aparece cuando tocamos al costado. Agarramos los ejemplos y los copiamos por ejemplo el del contacto en el drawer y tambien hacemos lo mismo en las sections.
 			- Ahora vamos a configurar las rutas en "elements/routing.html" y hacemos lo mismo de copiar y pegar. Es muy similar a express.io
 			- Ahora copiamos y pegamos lo que nos dice: "https://elements.polymer-project.org/elements/google-map" que eso esta en el catalogo de polymer que es desde donde sacamos los mapas y tenemos que instalar las dependencias de los mismos con "bower install --save GoogleWebComponents/google-map"
-			- Incluimos en el archivo "elements/elelemts.html" al elemento del mapa 
+			- Incluimos en el archivo "elements/elelemts.html" al elemento del mapa
 			<link rel="import" href="../bower_components/google-map/google-map.html">
-		
+
 Layout de Polymer: (todo esto va en las class)
-	- fullbleed => es para que ocupe lo maximo posible sin tener en cuenta margenes ni nada 
-	- layout vertical => si se lo dicis al padre, los hijos se acomodan solos. 
-	- layout horizontal 
+	- fullbleed => es para que ocupe lo maximo posible sin tener en cuenta margenes ni nada
+	- layout vertical => si se lo dicis al padre, los hijos se acomodan solos.
+	- layout horizontal
 	- flex => que intente ocupar mas espacio hasta que encuentre otro elemento. va en cada hijo explicitado.
 	- vertical layout center => si lo pones en el padre te centra los hijos pero cada uno en nuevas filas.
 
 Vamos a crear una tienda online!
-	Si nos vamos a "styles/app-theme.html" ahi tenemos para cambiar el estilo de la app en general. Siempre usar <style is="custom-style"> porque sino no funcionan los cambios. 
+	Si nos vamos a "styles/app-theme.html" ahi tenemos para cambiar el estilo de la app en general. Siempre usar <style is="custom-style"> porque sino no funcionan los cambios.
 		- :root nos cambia el header y otras cosas mas genreales.
-		- --drawer-menu-color: #7DCD40; nos cambia el background de donde dice menu. 
-		- Para cambiar el drawer panel de la izquierda por completo usamos 
+		- --drawer-menu-color: #7DCD40; nos cambia el background de donde dice menu.
+		- Para cambiar el drawer panel de la izquierda por completo usamos
 			paper-drawer-panel {
 				--paper-drawer-panel-left-drawer-conteiner: {
 					background-color: #93d561;
 				}
 			}
 
-	Vamos a consumir una api de mercadolibre y para eso vamos a usar ajax que lo encontramos en iron ajax en el catalogo de polymer 
+	Vamos a consumir una api de mercadolibre y para eso vamos a usar ajax que lo encontramos en iron ajax en el catalogo de polymer
 		=> Creamos un componente con el "yo polymer:el products-all"
 		=> Buscamos alguna API para pegarle. Por ejemplo https://api.mercadolibre.com/sites/MLA/search?category=MLA1648
 		=> Copiamos del catalo de polymer el ejemplo de ajax
 		http://stackoverflow.com/questions/30591409/using-polymer-ajax-response
 		=> Instalamos el bower dependences de ajax
-		=> Incluimos el iron ajax al elements.html
-		=> Incluimos nuestro webcomponent dentro de los sections asi lo podemos ver 
+		=> Incluimos el iron ajax al elementse.html
+		=> Incluimos nuestro webcomponent dentro de los sections asi lo podemos ver
 		=> Cambiamos las rutas en el archivo routes.html
 
 	Vamos a hacer que lo que traje de mercadolibre me lo ponga en cards y eso.
-		=> Creamos un div que adentro tiene un template y al template como es un elemento podemos ponerle el atributo "is=dom-repeat" el cual nos va a iterar 
+		=> Creamos un div que adentro tiene un template y al template como es un elemento podemos ponerle el atributo "is=dom-repeat" el cual nos va a iterar
 
 	Para saber mas de los FLEX en css
 		https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 	Vamos a hacer offline with service workers
 		=> Polymer traia por defecto que cache estuviera activado pero ahora como hubo problemas tenemos que habilitarlos nosotros. En el elements.html tenemos unas lineas comentadas que nos dan esa capacidad y dice (2/2) por lo que tenemos que buscar donde esta el (1/2) que esta en el index.html.
-		=> La documentacion facil: https://elements.polymer-project.org/elements/platinum-sw 
+		=> La documentacion facil: https://elements.polymer-project.org/elements/platinum-sw
 		=> Tenemos que ir al archivo gulpfile.js y ahi buscamos una nota que dice que agreguemos cache despues de vulcanize si queremos usar service workers.
 
-		
-
+Para poder extender la funcionalidad de los componentes propios de Polymer.
+			Tenemos que crear un componente y solamente tenemos que indicarle a el constructor de polymer que extiende de un elemento nativo.
+			Polymer({
+				is: "super-h1",
+				extends: "h1"
+			})
